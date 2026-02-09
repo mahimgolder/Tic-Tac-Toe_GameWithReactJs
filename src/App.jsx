@@ -1,9 +1,16 @@
 import './style.css';
 
 function Square({value}){
+
+  // Click Handelfunction here
+  function clikHandle(){
+    console.log('ClickHandle');
+  }
+
+
   return (
     <>
-      <button className="square">{value}</button>
+      <button className="square" onClick={clikHandle}>{value}</button>
     </>
   );
 }
@@ -14,19 +21,19 @@ export default function Board(){
   return (
     <>
       <div className='board-row'>
-        <Square value={1}></Square>
-        <Square value={2}></Square>
-        <Square value={3}></Square>
+        <Square value="1"></Square>
+        <Square value="2"></Square>
+        <Square value="3"></Square>
       </div>
       <div className='board-row'>
-        <Square value={4}></Square>
-        <Square value={5}></Square>
-        <Square value={6}></Square>
+        <Square value="4"></Square>
+        <Square value="5"></Square>
+        <Square value="6"></Square>
       </div>
       <div className='board-row'>
-        <Square value={7}></Square>
-        <Square value={8}></Square>
-        <Square value={9}></Square>
+        <Square value="7"></Square>
+        <Square value="8"></Square>
+        <Square value="9"></Square>
       </div>
     </>
   );
